@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Redirector",
+  "version": "1.0",
+  "description": "Automatically redirects leetcode.cn to leetcode.com as well as save leetcode problems to a dedicated notion database",
+  "permissions": [
+    "declarativeNetRequest",
+    "scripting",
+    "storage",
+    "activeTab",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://leetcode.cn/problems/*",
+    "https://api.notion.com/*"
+  ],
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "images/icon-32.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-32.png",
+    "128": "images/icon-32.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
